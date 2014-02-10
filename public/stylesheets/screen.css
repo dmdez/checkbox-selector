@@ -1,0 +1,162 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+/* line 7, ../../stylesheets/screen.scss */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+/* line 11, ../../stylesheets/screen.scss */
+body {
+  font-family: 'Lato', sans-serif;
+  background: #70788f;
+  color: white;
+}
+
+/* line 17, ../../stylesheets/screen.scss */
+.canvas {
+  max-width: 70em;
+  margin: 0 auto;
+}
+
+/* line 22, ../../stylesheets/screen.scss */
+.checkbox-window-frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1em;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  z-index: 3000;
+}
+
+/* line 37, ../../stylesheets/screen.scss */
+.checkbox-group.active .checkbox-window-frame {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* line 43, ../../stylesheets/screen.scss */
+.checkbox-group {
+  margin: 0 0 1em;
+}
+/* line 45, ../../stylesheets/screen.scss */
+.checkbox-group h3 {
+  font-size: 1em;
+  padding: .5em;
+  background: #5a6072;
+  cursor: pointer;
+  margin: 0;
+  font-weight: normal;
+}
+/* line 52, ../../stylesheets/screen.scss */
+.checkbox-group h3:hover {
+  background: #4e5464;
+}
+
+/* line 58, ../../stylesheets/screen.scss */
+.checkbox-selection {
+  margin: 0 .5em;
+  font-size: .9em;
+  background: #7e869a;
+}
+/* line 62, ../../stylesheets/screen.scss */
+.checkbox-selection .label {
+  display: inline-block;
+  position: relative;
+  padding: .2em 1.6em .2em .2em;
+  margin: 0 1em 0 0;
+}
+/* line 68, ../../stylesheets/screen.scss */
+.checkbox-selection.label:first-child {
+  box-shadow: 0 5px 5px #ccc;
+}
+/* line 71, ../../stylesheets/screen.scss */
+.checkbox-selection .cancel {
+  position: absolute;
+  top: .2em;
+  right: .2em;
+  color: #5a6072;
+  cursor: pointer;
+}
+/* line 78, ../../stylesheets/screen.scss */
+.checkbox-selection .cancel:hover {
+  color: #4e5464;
+}
+
+/* line 84, ../../stylesheets/screen.scss */
+.checkbox-window {
+  height: 100%;
+  max-height: 40em;
+  max-width: 40em;
+  overflow: hidden;
+  position: relative;
+  padding: 2.8em 0 2.2em;
+  background: #fff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: #434856;
+}
+/* line 96, ../../stylesheets/screen.scss */
+.checkbox-window ul {
+  overflow: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+/* line 106, ../../stylesheets/screen.scss */
+.checkbox-window ul label {
+  display: block;
+  padding: .4em;
+  border-bottom: 1px solid #ddd;
+  background: #eee;
+}
+/* line 112, ../../stylesheets/screen.scss */
+.checkbox-window ul label.active {
+  background: #434856;
+  color: white;
+}
+/* line 119, ../../stylesheets/screen.scss */
+.checkbox-window .checkbox-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  box-sizing: border-box;
+  border-width: 0 0 3px;
+  border-style: solid;
+  border-bottom-color: #666;
+  padding: .5em;
+  width: 100%;
+  margin: 0;
+  font-size: 1.2em;
+}
+/* line 134, ../../stylesheets/screen.scss */
+.checkbox-window .close {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  box-sizing: border-box;
+  background: #70788f;
+  color: #fff;
+  width: 100%;
+  padding: .5em;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+/* line 147, ../../stylesheets/screen.scss */
+.checkbox-window .close:hover {
+  background: #5a6072;
+}

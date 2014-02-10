@@ -1,0 +1,151 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import "compass/css3/transition";
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+$primary-color: #70788F;
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: $primary-color;
+    color: white;
+}
+
+.canvas {
+    max-width: 70em;
+    margin: 0 auto;
+}
+
+.checkbox-window-frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.7);
+    padding: 1em;
+    visibility: hidden;
+    opacity: 0;
+    @include transition(opacity .4s);
+    z-index: 3000;
+}
+
+.checkbox-group.active {
+    .checkbox-window-frame {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.checkbox-group {
+    margin: 0 0 1em;
+    h3 {
+        font-size: 1em;
+        padding: .5em;        
+        background: darken($primary-color, 10%);
+        cursor: pointer;
+        margin: 0;
+        font-weight: normal;
+        &:hover {
+            background: darken($primary-color, 15%);;
+        }
+    }
+}
+
+.checkbox-selection {
+    margin: 0 .5em;
+    font-size: .9em;
+    background: lighten($primary-color, 5%);
+    .label {
+        display: inline-block;
+        position: relative;
+        padding: .2em 1.6em .2em .2em;
+        margin: 0 1em 0 0;
+    }
+    &.label:first-child {
+        box-shadow: 0 5px 5px #ccc;
+    }
+    .cancel {
+        position: absolute;
+        top: .2em;
+        right: .2em;
+        color: darken($primary-color, 10%);
+        cursor: pointer;
+
+        &:hover {
+            color: darken($primary-color, 15%);
+        }
+    }
+}
+
+.checkbox-window {
+    height: 100%;
+    max-height: 40em;
+    max-width: 40em;
+    overflow: hidden;
+    position: relative;
+    padding: 2.8em 0 2.2em;
+    background: #fff;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: darken($primary-color, 20%);
+
+    ul {
+        overflow: auto;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+        z-index: 2;
+        box-sizing: border-box;
+
+        label {
+            display: block;
+            padding: .4em;
+            border-bottom: 1px solid #ddd;
+            background: #eee;
+
+            &.active {
+                background: darken($primary-color, 20%);
+                color: white;
+            }
+        }
+    }
+
+    .checkbox-filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        box-sizing: border-box;
+        border-width: 0 0 3px;
+        border-style: solid;
+        border-bottom-color: #666;
+        padding: .5em;
+        width: 100%;
+        margin: 0;
+        font-size: 1.2em;
+    }
+
+    .close {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 4;
+        box-sizing: border-box;
+        background: $primary-color;
+        color: #fff;
+        width: 100%;
+        padding: .5em;
+        text-align: center;
+        cursor: pointer;
+        font-size: 1.2em;
+        &:hover {
+            background: darken($primary-color, 10%);
+        }
+    }
+}
