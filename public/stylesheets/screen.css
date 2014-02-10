@@ -106,6 +106,7 @@ body {
 /* line 96, ../../stylesheets/screen.scss */
 .checkbox-window ul {
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -114,19 +115,19 @@ body {
   z-index: 2;
   box-sizing: border-box;
 }
-/* line 106, ../../stylesheets/screen.scss */
+/* line 107, ../../stylesheets/screen.scss */
 .checkbox-window ul label {
   display: block;
   padding: .4em;
   border-bottom: 1px solid #ddd;
   background: #eee;
 }
-/* line 112, ../../stylesheets/screen.scss */
+/* line 113, ../../stylesheets/screen.scss */
 .checkbox-window ul label.active {
   background: #434856;
   color: white;
 }
-/* line 119, ../../stylesheets/screen.scss */
+/* line 120, ../../stylesheets/screen.scss */
 .checkbox-window .checkbox-filter {
   position: absolute;
   top: 0;
@@ -141,7 +142,7 @@ body {
   margin: 0;
   font-size: 1.2em;
 }
-/* line 134, ../../stylesheets/screen.scss */
+/* line 135, ../../stylesheets/screen.scss */
 .checkbox-window .close {
   position: absolute;
   bottom: 0;
@@ -156,7 +157,7 @@ body {
   cursor: pointer;
   font-size: 1.2em;
 }
-/* line 147, ../../stylesheets/screen.scss */
+/* line 148, ../../stylesheets/screen.scss */
 .checkbox-window .close:hover {
   background: #5a6072;
 }
